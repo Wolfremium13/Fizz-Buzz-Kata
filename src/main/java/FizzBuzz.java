@@ -12,7 +12,7 @@ public class FizzBuzz {
     }
 
     private String fizzBuzzLogic(String text) {
-        final var number = parseToInt(text);
+        final var number = Integer.parseInt(text);
         final var isFizz = number % 3 == 0;
         final var isBuzz = number % 5 == 0;
         final var isFizzBuzz = isFizz && isBuzz;
@@ -21,10 +21,6 @@ public class FizzBuzz {
         if (isFizz) return "Fizz";
         if (isBuzz) return "Buzz";
         return text;
-    }
-
-    private int parseToInt(String text) {
-        return Integer.parseInt(text);
     }
 
     public String printInConsole(List<String> numbers) {
