@@ -8,10 +8,10 @@ public class FizzBuzz {
     }
 
     public List<String> calculate(List<String> givenNumbers) {
-        return givenNumbers.stream().map(this::calculateFizzBuzzFrom).toList();
+        return givenNumbers.stream().map(this::fizzBuzzLogic).toList();
     }
 
-    private String calculateFizzBuzzFrom(String text) {
+    private String fizzBuzzLogic(String text) {
         final var number = parseToInt(text);
         final boolean isFizz = number % 3 == 0;
         final boolean isBuzz = number % 5 == 0;
