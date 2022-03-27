@@ -27,10 +27,10 @@ public class FizzBuzz {
         return Integer.parseInt(text);
     }
 
-    public String printInConsole(List<String> calculatedNumbers) {
+    public String printInConsole(List<String> numbers) {
         final var outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        for (var number : calculatedNumbers) {
+        for (var number : numbers) {
             System.out.print(number);
         }
         return outContent.toString();
