@@ -13,9 +13,9 @@ public class FizzBuzz {
 
     private String fizzBuzzLogic(String text) {
         final var number = parseToInt(text);
-        final boolean isFizz = number % 3 == 0;
-        final boolean isBuzz = number % 5 == 0;
-        final boolean isFizzBuzz = isFizz && isBuzz;
+        final var isFizz = number % 3 == 0;
+        final var isBuzz = number % 5 == 0;
+        final var isFizzBuzz = isFizz && isBuzz;
 
         if (isFizzBuzz) return "FizzBuzz";
         if (isFizz) return "Fizz";
@@ -28,7 +28,7 @@ public class FizzBuzz {
     }
 
     public String printInConsole(List<String> calculatedNumbers) {
-        final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        final var outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         for (var number : calculatedNumbers) {
             System.out.print(number);
