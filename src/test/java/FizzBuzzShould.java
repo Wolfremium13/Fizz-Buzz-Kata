@@ -54,11 +54,9 @@ public class FizzBuzzShould {
 
     @Test
     void print_fizz_buzz_given_a_list_of_numbers() {
-        var givenNumbers = List.of("1", "3", "5", "15");
         var expectedNumbers = List.of("1", "Fizz", "Buzz", "FizzBuzz");
 
-        var calculatedNumbers = fizzBuzz.calculate(givenNumbers);
-        var consoleOutput = fizzBuzz.printInConsole(calculatedNumbers);
+        var consoleOutput = fizzBuzz.printInConsole(expectedNumbers);
 
         assertThat(consoleOutput).isEqualTo(String.join("", expectedNumbers));
     }
